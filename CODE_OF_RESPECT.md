@@ -1,10 +1,5 @@
 # Code of Respect
 
-Welcome to our Rust project! We are committed to fostering a respectful, welcoming, and collaborative environment for everyone.
-
-## The rules
-
-- Using welcoming and respecfuls language (No R word for exemple)
 - Being respectful of differing viewpoints, experiences and politics views
 - Focus on the codes rather politics like every programs should
 - This program is mostly apolitic (this is not the place for political propanganda from either the left or the right or the center)
@@ -14,4 +9,4 @@ Welcome to our Rust project! We are committed to fostering a respectful, welcomi
 - And mostly importantly : use the program for good uses and have fun !!!
 - NO discrimination or harassment allowed
 
-### These rules are recommendations and may or may not be enforced
+## These rules are recommendations and may or may not be enforced

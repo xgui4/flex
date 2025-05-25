@@ -11,19 +11,20 @@ Flex is a simple Rust project designed to display ASCII art from `.ascii` files.
 
 1. Build the project:
 
-    ```
+    ```bash
     cargo build --release
     ```
 
 2. Run the program with an `.ascii` file:
 
-    ```
+    ```bash
     ./target/release/flex [option] 
     or 
     ./target/release/flex <path to the .ascii file>
     ```
+
     wait until the program and enter the path of the .ascii file (without the `.ascii` extension)
 
-## Code of Respect 
-[Click Here](CODE_OF_RESPECT.md)
+## Code of Respect
 
+[Click Here](CODE_OF_RESPECT.md)
