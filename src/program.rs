@@ -10,7 +10,7 @@ pub fn start_program() {
     let args: Vec<_> = env::args().collect(); 
     if args.len() > 1 {
         if args[1] == "--version" || args[1] == "--v" {
-            println!("Flex Version 0.0.1");
+            println!("Flex Version 0.0.1 Developper Preview 1");
         }
         if args[1] == "--license" || args[1] == "--l" {
             println!("Copyright ©️ 2025 Xgui4 Studio | MIT License");
