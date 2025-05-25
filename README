@@ -1,0 +1,26 @@
+# Flex
+
+Flex is a simple Rust project designed to display ASCII art from `.ascii` files.
+
+## Features
+
+- Reads ASCII art from files with the `.ascii` extension
+- Prints the ASCII art to the terminal
+
+## Usage
+
+1. Build the project:
+
+    ```
+    cargo build --release
+    ```
+
+2. Run the program with an `.ascii` file:
+
+    ```
+    ./target/release/flex path/to/art.ascii
+    ```
+
+## Example
+
+Suppose you have a file called `smile.ascii`:
