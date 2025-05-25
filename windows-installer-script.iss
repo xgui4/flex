@@ -34,13 +34,13 @@ ArchitecturesInstallIn64BitMode=x64compatible
 ChangesAssociations=yes
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=C:\programmation\flex\LICENSE
-InfoBeforeFile=C:\programmation\flex\README.md
-InfoAfterFile=C:\programmation\flex\CODE_OF_RESPECT.md
+LicenseFile=LICENSE
+InfoBeforeFile=README.md
+InfoAfterFile=CODE_OF_RESPECT.md
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
 OutputBaseFilename=Flex
-SetupIconFile=C:\Users\Owner\Pictures\avatar.ico
+SetupIconFile=assets\avatar.ico
 SolidCompression=yes
 WizardStyle=modern
 
@@ -51,8 +51,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\programmation\flex\target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\programmation\flex\target\release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "\target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "\target\release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]

@@ -23,7 +23,7 @@ Flex is a simple Rust project designed to display ASCII art from `.ascii` files.
     ./target/release/flex <path to the .ascii file>
     ```
 
-    wait until the program and enter the path of the .ascii file (without the `.ascii` extension)
+    wait until the program and enter the path of the .ascii file
 
 ## Code of Respect
 
