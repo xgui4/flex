@@ -34,9 +34,9 @@ ArchitecturesInstallIn64BitMode=x64compatible
 ChangesAssociations=yes
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=LICENSE
-InfoBeforeFile=assets/README.rtf
-InfoAfterFile=assets/CODE_OF_RESPECT.rtf
+LicenseFile=docs/LICENSE.rtf
+InfoBeforeFile=docs/INFORMATION.rtf
+InfoAfterFile=docs/CODE-OF-RESPECT.rtf
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
 OutputBaseFilename=Flex
