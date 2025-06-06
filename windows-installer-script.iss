@@ -2,9 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Flex"
-#define MyAppVersion "0.0.1"
+#define MyAppVersion "0.0.0.4"
 #define MyAppPublisher "Xgui4 Studio"
-#define MyAppURL "https://xgui4.github.io/flex"
+#define MyAppURL "https://www.github.com/xgui4/flex"
 #define MyAppExeName "flex.exe"
 #define MyAppAssocName "ASCII Art Image"
 #define MyAppAssocExt ".ascii"
@@ -34,13 +34,13 @@ ArchitecturesInstallIn64BitMode=x64compatible
 ChangesAssociations=yes
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=LICENSE
-InfoBeforeFile=README.md
-InfoAfterFile=CODE_OF_RESPECT.md
+LicenseFile=docs/LICENSE.rtf
+InfoBeforeFile=docs/INFORMATION.rtf
+InfoAfterFile=docs/CODE-OF-RESPECT.rtf
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
 OutputBaseFilename=Flex
-SetupIconFile=assets\avatar.ico
+SetupIconFile=assets\setup.ico
 SolidCompression=yes
 WizardStyle=modern
 
@@ -60,6 +60,9 @@ Root: HKA; Subkey: "Software\Classes\{#MyAppAssocExt}\OpenWithProgids"; ValueTyp
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}"; ValueType: string; ValueName: ""; ValueData: "{#MyAppAssocName}"; Flags: uninsdeletekey
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#MyAppExeName},0"
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
+Root: HKLM; Subkey: "SYSTEM\CurrentControlSet\Control\Session Manager\Environment"; ValueType: expandsz; ValueName: "Path"; ValueData: "{olddata};{app}"; Flags: preservestringtype
+Root: HKCR; Subkey: "Xgui4.AsciiFile\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "assets/ascii.ico"; Flags: uninsdeletekey
+
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

@@ -7,22 +7,27 @@ const PATH_INPUT_LABEL: &str = "Enter the full path or relative path of the ASCI
 const ERROR_READ_CONSOLE: &str = "Error : failed to read console"; 
 const ERROR_FILE_CANNOT_BE_READ: &str = "Error : Should have been able to read the file"; 
 const ERROR_FILE_NOT_FOUND: &str = "Error : file cannot be read"; 
+const VERSION: &str = "0.0.1 Developper Preview 3"; 
+const LICENSE: &str = "Copyright ©️ 2025 Xgui4 Studio | MIT License"; 
+const ABOUT: &str = "Flex is a simple Rust project designed to display ASCII art from .ascii files."; 
+const OPTION_LABEL: &str = "[option]"; 
+const PATH_INPUT_HELP_LABEL: &str = "<path to the .ascii file>"; 
 
 pub fn start_program() {
     let args: Vec<_> = env::args().collect(); 
     if args.len() > 1 {
         if args[1] == "--version" || args[1] == "--v" {
-            println!("Flex Version 0.0.1 Developper Preview 2");
+            println!("Flex Version {VERSION}");
         }
         if args[1] == "--license" || args[1] == "--l" {
-            println!("Copyright ©️ 2025 Xgui4 Studio | MIT License");
+            println!("{LICENSE}");
         }
         if args[1] == "--about" || args[1] == "--a" {
-            println!("Flex is a simple Rust project designed to display ASCII art from .ascii files.")
+            println!("{ABOUT}")
         }
         if args[1] == "--help" || args[1] == "--h" {
-            println!("flex [option]"); 
-            println!("flex <path to the .ascii file>"); 
+            println!("flex {OPTION_LABEL}"); 
+            println!("flex {PATH_INPUT_HELP_LABEL}"); 
         }
         else {
             output_image(&args[1]);

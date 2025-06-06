@@ -1,4 +1,4 @@
-# Code of Respect
+# Code of Respect (Code of conduct)
 
 - Being respectful of differing viewpoints, experiences and politics views
 - Focus on the codes rather politics like every programs should

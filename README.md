@@ -27,4 +27,4 @@ Flex is a simple Rust project designed to display ASCII art from `.ascii` files.
 
 ## Code of Respect
 
-[Click Here](CODE_OF_RESPECT.md)
+[Click Here](code-of-conduct.md)
