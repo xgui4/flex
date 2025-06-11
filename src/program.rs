@@ -1,13 +1,12 @@
-use std::fs;
-use std::io;
-use std::env;
+use std::{fs, io};
 use std::path::Path;
+use std::{env};
 
 const PATH_INPUT_LABEL: &str = "Enter the full path or relative path of the ASCII art file you want to display:";
 const ERROR_READ_CONSOLE: &str = "Error : failed to read console"; 
 const ERROR_FILE_CANNOT_BE_READ: &str = "Error : Should have been able to read the file"; 
 const ERROR_FILE_NOT_FOUND: &str = "Error : file cannot be read"; 
-const VERSION: &str = "0.0.1 Developper Preview 3"; 
+const VERSION: &str = "0.0.1 Developper Preview 4"; 
 const LICENSE: &str = "Copyright ©️ 2025 Xgui4 Studio | MIT License"; 
 const ABOUT: &str = "Flex is a simple Rust project designed to display ASCII art from .ascii files."; 
 const OPTION_LABEL: &str = "[option]"; 
@@ -28,6 +27,14 @@ pub fn start_program() {
         if args[1] == "--help" || args[1] == "--h" {
             println!("flex {OPTION_LABEL}"); 
             println!("flex {PATH_INPUT_HELP_LABEL}"); 
+        }
+        if args[1] == "--create" || args[1] == "--c" {
+            /*
+            print!("Choose a ascii project file name");
+            let mut user_choice = String::new(); 
+            io::stdin().read_line(&mut user_choice).expect(ERROR_READ_CONSOLE);
+            */
+            print!("Coming soon !")
         }
         else {
             output_image(&args[1]);
