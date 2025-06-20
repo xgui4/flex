@@ -9,4 +9,4 @@ windows_exe_info = "0.5"
 
 [dependencies]
 windows_exe_info = {version = "0.5", features = ["manifest"]}
-zip = "4.0.0"
+# zip = "4.1.0" # for later
