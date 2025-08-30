@@ -16,7 +16,7 @@
 AppId={{CEA42953-7BBB-49A5-876C-D36F75054DD1}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-;AppVerName={#MyAppName} {#MyAppVersion}
+AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
@@ -33,6 +33,11 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 ChangesAssociations=yes
 DefaultGroupName={#MyAppName}
+AllowNoIcons=yes
+LicenseFile=docs/LICENSE.rtf
+InfoBeforeFile=docs/INFORMATION.rtf
+InfoAfterFile=docs/CODE-OF-RESPECT.rtf
+PrivilegesRequired=lowest
 LicenseFile=..\docs\LICENSE.rtf
 InfoBeforeFile=..\docs\INFORMATION.rtf
 InfoAfterFile=..\docs\CODE-OF-RESPECT.rtf
@@ -43,16 +48,19 @@ SetupIconFile=..\assets\icons\setup.ico
 SolidCompression=yes
 WizardStyle=modern
 
+[Files]
+Source: "docs\*"; DestDir: "{app}\docs"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "assets\images\*"; DestDir: "{app}\images"; Flags: ignoreversion recursesubdirs createallsubdirs
+
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
+; Name: "french"; MessagesFile: "compiler:Default.isl" -- not yet translated/workings
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "..\target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\target\release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+Source: "target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 
 [Registry]
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocExt}\OpenWithProgids"; ValueType: string; ValueName: "{#MyAppAssocKey}"; ValueData: ""; Flags: uninsdeletevalue
