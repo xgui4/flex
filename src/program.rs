@@ -34,6 +34,16 @@ pub fn start_program() {
         if args[1] == "--gui" || args[1] == "--g" {
             create_window();
         }
+        if args[1] == "--color-code" || args[1] == "--cc" {
+            println!("Color Code Reference:");
+            println!("$1 : Red");
+            println!("$2 : Green");
+            println!("$3 : Yellow");
+            println!("$4 : Blue");
+            println!("$5 : Magenta");
+            println!("$6 : Cyan");
+            println!("$0 : Reset");
+        }
         else {
             output_image(&args[1]);
         }
