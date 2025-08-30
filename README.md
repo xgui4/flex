@@ -17,7 +17,7 @@ Flex is a simple Rust project designed to display ASCII art from `.ascii` files.
 - MacOS (could, but unsupported as I do not own a Mac)
 - Any OS in UNIX Spectrum (not tested yet)
 
-## Usage
+## Usage (This section is gonna get rewrite soon to add the future modes/features)
 
 1. Build the project:
 

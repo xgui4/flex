@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Flex"
-#define MyAppVersion "0.0.0.4"
+#define MyAppVersion "0.0.0.5"
 #define MyAppPublisher "Xgui4 Studio"
 #define MyAppURL "https://www.github.com/xgui4/flex"
 #define MyAppExeName "flex.exe"
@@ -33,14 +33,13 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 ChangesAssociations=yes
 DefaultGroupName={#MyAppName}
-AllowNoIcons=yes
-LicenseFile=docs/LICENSE.rtf
-InfoBeforeFile=docs/INFORMATION.rtf
-InfoAfterFile=docs/CODE-OF-RESPECT.rtf
+LicenseFile=..\docs\LICENSE.rtf
+InfoBeforeFile=..\docs\INFORMATION.rtf
+InfoAfterFile=..\docs\CODE-OF-RESPECT.rtf
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
 OutputBaseFilename=Flex
-SetupIconFile=assets\icons\setup.ico
+SetupIconFile=..\assets\icons\setup.ico
 SolidCompression=yes
 WizardStyle=modern
 
@@ -51,8 +50,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "target\release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\target\release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]

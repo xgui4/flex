@@ -1,0 +1,11 @@
+{
+    "PATH_INPUT_LABEL": "Entrez le chemin complet ou le chemin relatif du fichier d'art ASCII que vous voulez afficher.",
+    "ERROR_READ_CONSOLE": "Erreur : échec de lecture de la console",
+    "ERROR_FILE_CANNOT_BE_READ": "Erreur : le fichier aurait dû pouvoir être lu",
+    "ERROR_FILE_NOT_FOUND": "Erreur : le fichier ne peut pas être lu",
+    "VERSION": "0.0.1 Developper Preview 4",
+    "LICENSE": "Copyright ©️ 2025 Xgui4 Studio | License MIT",
+    "ABOUT": "Flex est un projet Rust simple conçu pour afficher de l'art ASCII à partir de fichiers .ascii.",
+    "OPTION_LABEL": "[option]",
+    "PATH_INPUT_HELP_LABEL": "<chemin vers le fichier .ascii>"
+} 

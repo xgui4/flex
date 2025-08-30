@@ -26,10 +26,29 @@ pub fn start_program() {
         }
         if args[1] == "--help" || args[1] == "--h" {
             println!("flex {OPTION_LABEL}");
+            println!("flex --License or --l"); 
+            println!("flex --about or --a");
+            println!("flex --version or --l"); 
+            println!("flex --create or --c (coming soon)");
+            println!("flex --gui or --g (coming soon!)"); 
+            println!("flex --color-code or --cc");
             println!("flex {PATH_INPUT_HELP_LABEL}");
         }
         if args[1] == "--create" || args[1] == "--c" {
-            println!("Coming soon ! - reported to later due to technical difficulty")
+            println!("Features Not Implemented Yet !")
+        }
+        if args[1] == "--color-code" || args[1] == "--cc" {
+            println!("Color Code Reference:");
+            println!("$1 : Red");
+            println!("$2 : Green");
+            println!("$3 : Yellow");
+            println!("$4 : Blue");
+            println!("$5 : Magenta");
+            println!("$6 : Cyan");
+            println!("$0 : Reset");
+        }
+        if args[1] == "--gui" || args[1] == "--g" {
+            create_window();
         }
         else {
             output_image(&args[1]);
@@ -57,9 +76,24 @@ fn output_image(path: &str) {
 
     match absolute_path {
         Ok(real_path) => match fs::read_to_string(real_path) {
-            Ok(image) => println!("{image}"),
+            Ok(image) => {
+            // Simple color replacement: $1, $2, ... replaced by ANSI color codes
+            let colored_image = image
+                .replace("$1", "\x1b[31m") // Red
+                .replace("$2", "\x1b[32m") // Green
+                .replace("$3", "\x1b[33m") // Yellow
+                .replace("$4", "\x1b[34m") // Blue
+                .replace("$5", "\x1b[35m") // Magenta
+                .replace("$6", "\x1b[36m") // Cyan
+                .replace("$0", "\x1b[0m"); // Reset
+            println!("{colored_image}\x1b[0m");
+            },
             Err(e) => println!("{ERROR_FILE_CANNOT_BE_READ}: {}", e),
         },
         Err(_) => println!("{ERROR_FILE_NOT_FOUND}"),
     }
+}
+
+fn create_window() {
+    println!("GUI mode is not yet implemented. Please use the command line interface.");
 }
