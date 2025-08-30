@@ -60,7 +60,18 @@ fn output_image(path: &str) {
 
     match absolute_path {
         Ok(real_path) => match fs::read_to_string(real_path) {
-            Ok(image) => println!("{image}"),
+            Ok(image) => {
+            // Simple color replacement: $1, $2, ... replaced by ANSI color codes
+            let colored_image = image
+                .replace("$1", "\x1b[31m") // Red
+                .replace("$2", "\x1b[32m") // Green
+                .replace("$3", "\x1b[33m") // Yellow
+                .replace("$4", "\x1b[34m") // Blue
+                .replace("$5", "\x1b[35m") // Magenta
+                .replace("$6", "\x1b[36m") // Cyan
+                .replace("$0", "\x1b[0m"); // Reset
+            println!("{colored_image}\x1b[0m");
+            },
             Err(e) => println!("{ERROR_FILE_CANNOT_BE_READ}: {}", e),
         },
         Err(_) => println!("{ERROR_FILE_NOT_FOUND}"),
