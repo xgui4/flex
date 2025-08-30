@@ -37,8 +37,7 @@ AllowNoIcons=yes
 LicenseFile=docs/LICENSE.rtf
 InfoBeforeFile=docs/INFORMATION.rtf
 InfoAfterFile=docs/CODE-OF-RESPECT.rtf
-; Uncomment the following line to run in non administrative install mode (install for current user only).
-;PrivilegesRequired=lowest
+PrivilegesRequired=lowest
 OutputBaseFilename=Flex
 SetupIconFile=assets\icons\setup.ico
 SolidCompression=yes
@@ -50,6 +49,7 @@ Source: "assets\images\*"; DestDir: "{app}\images"; Flags: ignoreversion recurse
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
+Name: "french"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked

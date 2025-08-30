@@ -29,7 +29,10 @@ pub fn start_program() {
             println!("flex {PATH_INPUT_HELP_LABEL}");
         }
         if args[1] == "--create" || args[1] == "--c" {
-            println!("Coming soon ! - reported to later due to technical difficulty")
+            println!("Create mode is not yet implemented. Create your own .ascii files manually for now.");
+        }
+        if args[1] == "--gui" || args[1] == "--g" {
+            create_window();
         }
         else {
             output_image(&args[1]);
@@ -62,4 +65,8 @@ fn output_image(path: &str) {
         },
         Err(_) => println!("{ERROR_FILE_NOT_FOUND}"),
     }
+}
+
+fn create_window() {
+    println!("GUI mode is not yet implemented. Please use the command line interface.");
 }
