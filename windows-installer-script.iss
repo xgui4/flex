@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Flex"
-#define MyAppVersion "0.0.0.4"
+#define MyAppVersion "0.0.0.5"
 #define MyAppPublisher "Xgui4 Studio"
 #define MyAppURL "https://www.github.com/xgui4/flex"
 #define MyAppExeName "flex.exe"
@@ -16,7 +16,7 @@
 AppId={{CEA42953-7BBB-49A5-876C-D36F75054DD1}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-;AppVerName={#MyAppName} {#MyAppVersion}
+AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
@@ -37,23 +37,25 @@ AllowNoIcons=yes
 LicenseFile=docs/LICENSE.rtf
 InfoBeforeFile=docs/INFORMATION.rtf
 InfoAfterFile=docs/CODE-OF-RESPECT.rtf
-; Uncomment the following line to run in non administrative install mode (install for current user only).
-;PrivilegesRequired=lowest
+PrivilegesRequired=lowest
 OutputBaseFilename=Flex
 SetupIconFile=assets\icons\setup.ico
 SolidCompression=yes
 WizardStyle=modern
 
+[Files]
+Source: "docs\*"; DestDir: "{app}\docs"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "assets\images\*"; DestDir: "{app}\images"; Flags: ignoreversion recursesubdirs createallsubdirs
+
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
+; Name: "french"; MessagesFile: "compiler:Default.isl" -- not yet translated/workings
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
 Source: "target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "target\release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocExt}\OpenWithProgids"; ValueType: string; ValueName: "{#MyAppAssocKey}"; ValueData: ""; Flags: uninsdeletevalue
