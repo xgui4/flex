@@ -49,7 +49,7 @@ Source: "assets\images\*"; DestDir: "{app}\images"; Flags: ignoreversion recurse
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
-Name: "french"; MessagesFile: "compiler:Default.isl"
+; Name: "french"; MessagesFile: "compiler:Default.isl" -- not yet translated/workings
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
