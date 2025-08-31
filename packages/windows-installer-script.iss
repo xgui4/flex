@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Flex"
-#define MyAppVersion "0.0.0.4"
+#define MyAppVersion "0.0.0.5"
 #define MyAppPublisher "Xgui4 Studio"
 #define MyAppURL "https://www.github.com/xgui4/flex"
 #define MyAppExeName "flex.exe"
@@ -16,7 +16,7 @@
 AppId={{CEA42953-7BBB-49A5-876C-D36F75054DD1}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-;AppVerName={#MyAppName} {#MyAppVersion}
+AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
@@ -33,27 +33,29 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 ChangesAssociations=yes
 DefaultGroupName={#MyAppName}
-AllowNoIcons=yes
-LicenseFile=docs/LICENSE.rtf
-InfoBeforeFile=docs/INFORMATION.rtf
-InfoAfterFile=docs/CODE-OF-RESPECT.rtf
+LicenseFile=..\docs\LICENSE.rtf
+InfoBeforeFile=..\docs\INFORMATION.rtf
+InfoAfterFile=..\docs\CODE-OF-RESPECT.rtf
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
 OutputBaseFilename=Flex
-SetupIconFile=assets\setup.ico
+SetupIconFile=..\assets\icons\setup.ico
 SolidCompression=yes
 WizardStyle=modern
 
+[Files]
+Source: "docs\*"; DestDir: "{app}\docs"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "assets\images\*"; DestDir: "{app}\images"; Flags: ignoreversion recursesubdirs createallsubdirs
+
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
+; Name: "french"; MessagesFile: "compiler:Default.isl" -- not yet translated/workings
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
 Source: "target\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "target\release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocExt}\OpenWithProgids"; ValueType: string; ValueName: "{#MyAppAssocKey}"; ValueData: ""; Flags: uninsdeletevalue
@@ -61,8 +63,7 @@ Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}"; ValueType: string; Value
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#MyAppExeName},0"
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 Root: HKLM; Subkey: "SYSTEM\CurrentControlSet\Control\Session Manager\Environment"; ValueType: expandsz; ValueName: "Path"; ValueData: "{olddata};{app}"; Flags: preservestringtype
-Root: HKCR; Subkey: "Xgui4.AsciiFile\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "assets/ascii.ico"; Flags: uninsdeletekey
-
+Root: HKCR; Subkey: "Xgui4.AsciiFile\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "assets\icons\ascii.ico"; Flags: uninsdeletekey
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

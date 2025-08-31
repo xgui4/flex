@@ -2,6 +2,4 @@
 
 echo 'flex Linux Launcher'
 
-echo
-
-. target/release/flex 
+exec target/release/flex 
