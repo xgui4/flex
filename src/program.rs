@@ -12,6 +12,11 @@ const ABOUT: &str = "Flex is a simple Rust project designed to display ASCII art
 const OPTION_LABEL: &str = "[option]";
 const PATH_INPUT_HELP_LABEL: &str = "<path to the .ascii file>";
 
+
+pub fn start_script_mode() {
+    println!("Feature Not Implemented Yet! Try using normal mode for now")
+}
+
 pub fn start_program() {
     let args: Vec<_> = env::args().collect();
     if args.len() > 1 {
