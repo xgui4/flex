@@ -1,2 +1,8 @@
 /target
 /Output
+
+/packages/pkg
+/packages/src
+
+*.tar.gz
+*.tar.zst
