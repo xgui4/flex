@@ -1,11 +1,31 @@
-# Code of Respect V2 (Apolitical Code of Conduct)
+# Code of Respect (V3 – Apolitical Code of Conduct)
 
-- This repo accepts everyone regardless of their identity, gender, skin color, religion, disability, opinion, ethnicity, economic, political view etc., if you are respectful and respect the other rules and want to contribute for the community
-- Being respectful of everyone
-- Focus on code and the software
-- This program is apolitical (this is not the place for political propaganda or activism)
-- NO NSFW stuff on this repo
-- Respect and accepts/embraces differences/natural diversity (including but not excluding neurodiversity) and disability
-- Follow the law
-- And mostly importantly: use the program for good uses and have fun
-- NO discrimination or harassment allowed
+## Inclusivity
+Everyone is welcome to contribute regardless of identity, gender, ethnicity, religion, disability, neurodivergence, background, or personal beliefs — provided they act respectfully and follow these rules.
+
+## Focus
+This project is about software.
+
+Contributions should focus on code, quality, and collaboration.
+
+This is not the place for political debate, activism, or propaganda.
+
+## Professionalism
+Treat others with respect and professionalism.
+
+Embrace natural diversity, including neurodiversity and disability.
+
+NSFW content is not allowed.
+
+## Behavior
+Harassment, bullying, intimidation, discrimination, or violent speech will not be tolerated.
+
+Disruptive or disrespectful behavior may result in removal from the project.
+
+## Enforcement
+If you see a violation of this Code, report it to the maintainers.
+
+Maintainers will review reports in good faith and may take appropriate action, up to and including removal from the community.
+
+## Make Software Development Great Again.
+This code of respect is inspired by the [No Code of Conduct](https://www.nocodeofconduct.com/)
