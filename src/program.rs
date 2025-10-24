@@ -1,6 +1,5 @@
 use std::{fs, io};
 use std::path::Path;
-use std::{env};
 
 const PATH_INPUT_LABEL: &str = "Enter the full path or relative path of the ASCII art file you want to display:";
 const ERROR_READ_CONSOLE: &str = "Error : failed to read console";
@@ -17,8 +16,7 @@ pub fn start_script_mode() {
     println!("Feature Not Implemented Yet! Try using normal mode for now")
 }
 
-pub fn start_program() {
-    let args: Vec<_> = env::args().collect();
+pub fn start_program(args: Vec<String>) {
     if args.len() > 1 {
         if args[1] == "--version" || args[1] == "--v" {
             println!("Flex Version {VERSION}");
