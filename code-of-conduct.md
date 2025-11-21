@@ -1,33 +1,41 @@
-# Code of Respect (V3 – Apolitical Code of Conduct)
+# Code of Respect
 
-## Everyone is Welcome
-Everyone is welcome to contribute regardless of identity, gender, ethnicity, religion, disability, neurodivergence, background, or personal beliefs as long as they act respectfully and follow these rules.
+## This document contains important information about the rules of the project
 
-## Focus on Software Development
-This project is about software.
+## Goals and Rules
 
-Contributions should focus on code, quality, and collaboration.  
-Pull requests should align with these principles.
+- Making Software
+- Technical Merit (not doing political debates or activism)
+- Making Everyone welcome
+- Push the project forward
+- Respect the goal and rules
+- Accept natural diversity (including neurodiversity and disability)
+- Treat others with respect and professionalism
+- NSFW content is not allowed (except if authorized).
 
-This is not the place for political debate, activism, or propaganda. 
+## Inclusivity and Professionalism
 
-## Professionalism, Respect, and Inclusivity
-- Treat others with respect and professionalism.  
-- Embrace natural diversity, including neurodiversity and disability.  
-- NSFW content is not allowed unless explicitly permitted by maintainers and clearly labeled.  
+## You are welcome here
 
-## Expected Behavior
-The following behaviors are not tolerated, including but not limited to:  
-- Harassment, bullying, intimidation, discrimination, or violent speech.  
-- Disruptive or disrespectful behavior.  
-- Violation of any of the rules above.  
+This mean you are to welcome to contribute and be a part of the community regardless
+of your identity, sex/gender, ethnicity, religion, disability, neurodivergence, background,
+or personal beliefs or political view.
 
-Violations may result in warnings, temporary suspension, or permanent ban. 
+## Focus
+
+This project is about software and [FLOSS](https://www.gnu.org/philosophy/free-sw.html) (Free/Libre and Open Source Software)
+
+Contributions should focus on code, quality, and collaboration.
+
+## Unacceptable Behaviour
+
+Harassment, bullying, intimidation, discrimination including ableism, homophobia (and heterophobia), sexism (of both male or female) and others, or violent speech will not be tolerated.
+
+Disruptive or disrespectful behavior may result in removal from the project.
 
 ## Enforcement
-If you see a violation of this Code, report it to the maintainers.  
 
-Maintainers will review reports in good faith and may take appropriate action, up to and including removal from the community.  
+We have no enforcement team (nor do we want one).
+You can create a issue on the project's issue tracker.
 
-## Acknowledgments
-This Code of Respect is inspired by the [No Code of Conduct](https://www.nocodeofconduct.com/).
+**Let's makes software togethers !**
