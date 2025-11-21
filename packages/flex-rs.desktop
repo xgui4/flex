@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Flex-rs
+Exec=flex-rs
+Comment=Show an ASCII Art File in a terminal
+Icon=assets/icons/icon.ico
+Terminal=true

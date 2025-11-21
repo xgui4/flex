@@ -5,7 +5,7 @@
 #define MyAppVersion "0.0.0.5"
 #define MyAppPublisher "Xgui4 Studio"
 #define MyAppURL "https://www.github.com/xgui4/flex"
-#define MyAppExeName "flex.exe"
+#define MyAppExeName "flex-rs.exe"
 #define MyAppAssocName "ASCII Art Image"
 #define MyAppAssocExt ".ascii"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt

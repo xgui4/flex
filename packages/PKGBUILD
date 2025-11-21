@@ -1,5 +1,5 @@
 # Maintainer: Xgui4
-pkgname=flex
+pkgname=flex-rs
 pkgver=0.0.5
 pkgrel=1
 pkgdesc="Show an ASCII Art File in a terminal"

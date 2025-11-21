@@ -7,7 +7,7 @@ const ERROR_FILE_CANNOT_BE_READ: &str = "Error : Should have been able to read t
 const ERROR_FILE_NOT_FOUND: &str = "Error : file cannot be read";
 const VERSION: &str = "0.0.1 Developper Preview 4";
 const LICENSE: &str = "Copyright ©️ 2025 Xgui4 Studio | MIT License";
-const ABOUT: &str = "Flex is a simple Rust project designed to display ASCII art from .ascii files.";
+const ABOUT: &str = "Flex-rs is a simple Rust project designed to display ASCII art from .ascii files.";
 const OPTION_LABEL: &str = "[option]";
 const PATH_INPUT_HELP_LABEL: &str = "<path to the .ascii file>";
 
@@ -19,7 +19,7 @@ pub fn start_script_mode() {
 pub fn start_program(args: Vec<String>) {
     if args.len() > 1 {
         if args[1] == "--version" || args[1] == "--v" {
-            println!("Flex Version {VERSION}");
+            println!("Flex-rs Version {VERSION}");
         }
         if args[1] == "--license" || args[1] == "--l" {
             println!("{LICENSE}");
@@ -28,14 +28,14 @@ pub fn start_program(args: Vec<String>) {
             println!("{ABOUT}")
         }
         if args[1] == "--help" || args[1] == "--h" {
-            println!("flex {OPTION_LABEL}");
-            println!("flex --License or --l"); 
-            println!("flex --about or --a");
-            println!("flex --version or --l"); 
-            println!("flex --create or --c (coming soon)");
-            println!("flex --gui or --g (coming soon!)"); 
-            println!("flex --color-code or --cc");
-            println!("flex {PATH_INPUT_HELP_LABEL}");
+            println!("flex-rs {OPTION_LABEL}");
+            println!("flex-rs --License or --l"); 
+            println!("flex-rs --about or --a");
+            println!("flex-rs --version or --l"); 
+            println!("flex-rs --create or --c (coming soon)");
+            println!("flex-rs --gui or --g (coming soon!)"); 
+            println!("flex-rs --color-code or --cc");
+            println!("flex-rs {PATH_INPUT_HELP_LABEL}");
         }
         if args[1] == "--create" || args[1] == "--c" {
             println!("Features Not Implemented Yet !")

@@ -2,7 +2,7 @@
 
 ![App Icon](assets/icons/icon.png)
 
-Flex is a simple Rust project designed to display ASCII art from `.ascii` files.
+Flex-rs is a simple Rust project designed to display ASCII art from `.ascii` files.
 
 ## Features
 
@@ -30,25 +30,25 @@ cargo build --release
 2. Run the program with an `.ascii` file:
 
 ```bash
-./target/release/flex [option]
+./target/release/flex-rs [option]
 
-./target/release/flex <path to the .ascii file>
+./target/release/flex-rs <path to the .ascii file>
 
-./target/release/flex --version # ./target/release/flex --v
+./target/release/flex-rs --version # ./target/release/flex-rs --v
 
-./target/release/flex --license # ./target/release/flex --l
+./target/release/flex-rs --license # ./target/release/flex-rs --l
 
-./target/release/flex --copyright # ./target/release/flex --c
+./target/release/flex-rs --copyright # ./target/release/flex-rs --c
 
-./target/release/flex --about # ./target/release/flex --a
+./target/release/flex-rs --about # ./target/release/flex-rs --a
 
-./target/release/flex --color-code # ./target/release/flex --cc
+./target/release/flex-rs --color-code # ./target/release/flex-rs --cc
 
-./target/release/flex --help # ./target/release/flex --h for more information about other commands
+./target/release/flex-rs --help # ./target/release/flex-rs --h for more information about other commands
 ```
 
 wait until the program and enter the path of the .ascii file
 
 ## Code of Respect
 
-[Code of conduct](code-of-conduct.md)
+[Code of Conduct](code-of-conduct.md)
