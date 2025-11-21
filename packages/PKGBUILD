@@ -1,0 +1,30 @@
+# Maintainer: Xgui4
+pkgname=flex-rs
+pkgver=0.0.5
+pkgrel=1
+pkgdesc="Show an ASCII Art File in a terminal"
+arch=('x86_64')
+url="https://github.com/xgui4/flex"
+license=('MIT')
+depends=('gcc-libs')
+makedepends=('rust' 'cargo')
+source=("$url/archive/refs/tags/$pkgver.tar.gz")
+sha256sums=('3b6ea205788083db38ba93dfb5143e80d8a547feb3ac4f9cc06160e5c6630330')
+
+build() {
+    cd "$srcdir/$pkgname-$pkgver"
+    cargo build --release --locked --all-features --target-dir=target
+}
+
+check() {
+    cd "$srcdir/$pkgname-$pkgver"
+    cargo test --release --locked --target-dir=target
+}
+
+package() {
+    cd "$srcdir/$pkgname-$pkgver"
+    install -Dm755 "target/release/$pkgname" "$pkgdir/usr/bin/$pkgname"
+    install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+    install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+    install -Dm644 code-of-conduct.md "$pkgdir/usr/share/doc/$pkgname/code-of-conduct.md"
+}

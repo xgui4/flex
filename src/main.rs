@@ -1,11 +1,16 @@
+use std::io;
+use std::env;
+
 pub mod program; 
-use std::io; 
 
 fn main()
 {
-    program::start_program();
+    let args: Vec<_> = env::args().collect();
 
-    println!("Press Enter to continue...");
+    // script mode is coming later
+     
+    program::start_program(args);
+    println!("Press any key to quit...");
     let mut input = String::new();
     io::stdin().read_line(&mut input).unwrap();
 }
