@@ -5,16 +5,11 @@ const PATH_INPUT_LABEL: &str = "Enter the full path or relative path of the ASCI
 const ERROR_READ_CONSOLE: &str = "Error : failed to read console";
 const ERROR_FILE_CANNOT_BE_READ: &str = "Error : Should have been able to read the file";
 const ERROR_FILE_NOT_FOUND: &str = "Error : file cannot be read";
-const VERSION: &str = "0.0.1 Developper Preview 4";
+const VERSION: &str = "0.0.1";
 const LICENSE: &str = "Copyright ©️ 2025 Xgui4 Studio | MIT License";
 const ABOUT: &str = "Flex-rs is a simple Rust project designed to display ASCII art from .ascii files.";
 const OPTION_LABEL: &str = "[option]";
 const PATH_INPUT_HELP_LABEL: &str = "<path to the .ascii file>";
-
-
-pub fn start_script_mode() {
-    println!("Feature Not Implemented Yet! Try using normal mode for now")
-}
 
 pub fn start_program(args: Vec<String>) {
     if args.len() > 1 {
@@ -25,33 +20,13 @@ pub fn start_program(args: Vec<String>) {
             println!("{LICENSE}");
         }
         if args[1] == "--about" || args[1] == "--a" {
-            println!("{ABOUT}")
+            println!("{ABOUT}");
         }
         if args[1] == "--help" || args[1] == "--h" {
-            println!("flex-rs {OPTION_LABEL}");
-            println!("flex-rs --License or --l"); 
-            println!("flex-rs --about or --a");
-            println!("flex-rs --version or --l"); 
-            println!("flex-rs --create or --c (coming soon)");
-            println!("flex-rs --gui or --g (coming soon!)"); 
-            println!("flex-rs --color-code or --cc");
-            println!("flex-rs {PATH_INPUT_HELP_LABEL}");
-        }
-        if args[1] == "--create" || args[1] == "--c" {
-            println!("Features Not Implemented Yet !")
+            print_help();
         }
         if args[1] == "--color-code" || args[1] == "--cc" {
-            println!("Color Code Reference:");
-            println!("$1 : Red");
-            println!("$2 : Green");
-            println!("$3 : Yellow");
-            println!("$4 : Blue");
-            println!("$5 : Magenta");
-            println!("$6 : Cyan");
-            println!("$0 : Reset");
-        }
-        if args[1] == "--gui" || args[1] == "--g" {
-            create_window();
+            print_colors_code_references();
         }
         else {
             output_image(&args[1]);
@@ -97,6 +72,24 @@ fn output_image(path: &str) {
     }
 }
 
-fn create_window() {
-    println!("GUI mode is not yet implemented. Please use the command line interface.");
+fn print_help() {
+    println!("flex-rs {OPTION_LABEL}");
+    println!("flex-rs --License or --l"); 
+    println!("flex-rs --about or --a");
+    println!("flex-rs --version or --l"); 
+    println!("flex-rs --create or --c (coming soon)");
+    println!("flex-rs --gui or --g (coming soon!)"); 
+    println!("flex-rs --color-code or --cc");
+    println!("flex-rs {PATH_INPUT_HELP_LABEL}");
+}
+
+fn print_colors_code_references() {
+    println!("Color Code Reference:");
+    println!("$1 : Red");
+    println!("$2 : Green");
+    println!("$3 : Yellow");
+    println!("$4 : Blue");
+    println!("$5 : Magenta");
+    println!("$6 : Cyan");
+    println!("$0 : Reset");
 }
