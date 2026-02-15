@@ -9,6 +9,7 @@ pub const PATH_INPUT_LABEL_KEY : &str = "enter_path_label";
 pub const ABOUT_LABEL_KEY: &str = "about_label_key";
 pub const OPTION_LABEL_KEY: &str = "option_label";
 pub const PATH_INPUT_HELP_LABEL_KEY: &str = "path_input_help_label";
+pub const PRESS_ANY_KEY_TO_QUIT_KEY: &str = "press_any_key_to_quit";
 
 pub const ERROR_READ_CONSOLE_KEY : &str = "error_read_console"; 
 pub const ERROR_FILE_CANNOT_BE_READ_KEY: &str = "error_file_unreable";

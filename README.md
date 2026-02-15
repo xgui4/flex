@@ -29,6 +29,11 @@ Flex-rs is a simple Rust project designed to display ASCII art from `.ascii` fil
 - MacOS (could, but unsupported as I do not own a Mac)
 - Any OS in UNIX Spectrum that the Rust toolchain support
 
+## Crate Used : 
+
+- [Rust-i18n](https://github.com/longbridge/rust-i18n)
+- windows_exe_info
+
 ## Usage
 
 This is how you use it in portable mode, installation version guide coming later
@@ -50,11 +55,9 @@ cargo build --release
 
 ./target/release/flex-rs --license # ./target/release/flex-rs --l
 
-./target/release/flex-rs --copyright # ./target/release/flex-rs --c
-
 ./target/release/flex-rs --about # ./target/release/flex-rs --a
 
-./target/release/flex-rs --color-code # ./target/release/flex-rs --cc
+./target/release/flex-rs --color-code # ./target/release/flex-rs -c
 
 ./target/release/flex-rs --help # ./target/release/flex-rs --h for more information about other commands
 ```

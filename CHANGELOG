@@ -7,3 +7,9 @@
 - Update the `README.md`
 - Update the `.ascii` files
 - Updated the cargo app image installer script
+- Refactor the whole program into more modular with "crates"
+- Add initial locale support with the rust crate rust-i18n 3
+- Upgrade to Rust 2024 (expriemental)
+- Update the `Cargo.toml` file with more info and updated version (0.0.2.0, in cargo.toml it is 0.0.20 due to technical reason)
+- Updated the windows installed docs
+- Add a vscode debugger option
