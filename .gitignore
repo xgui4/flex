@@ -1,13 +1,16 @@
+# Cargo/Rust compiler target files
 **/target
 **/Output
 
-**/packages/pkg
-**/packages/src
-
+# Compressed Folder 
 **.tar.gz
 **.tar.
 
+# Useless output
 **/packages/Output
 
+# Arch Makepkg build files output
 **flex/
-packages/flex-rs-2:r48.6ec7679-1-x86_64.pkg.tar.zst
+**/packages/pkg
+**/packages/src
+****pkg.tar.zst
