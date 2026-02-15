@@ -1,16 +1,14 @@
-use std::io;
-use std::env;
+use std::env::args;
 
 pub mod program; 
+pub mod cmd_line;
+pub mod data;
 
 fn main()
 {
-    let args: Vec<_> = env::args().collect();
+    let args = args().collect();
 
-    // script mode is coming later
-     
     program::start_program(args);
-    println!("Press any key to quit...");
-    let mut input = String::new();
-    io::stdin().read_line(&mut input).unwrap();
+
+    program::keep_app_open_unil_key_pressed();
 }

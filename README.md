@@ -11,11 +11,23 @@ Flex-rs is a simple Rust project designed to display ASCII art from `.ascii` fil
 
 ## Compatible Operating System
 
-- Windows
-- GNU/Linux
-- BSD (not tested yet)
+### Technical Requirement
+
+- A terminal shell
+- Color Escape support higly recommended
+- A .ascii file
+
+### Official Packages/Installer
+- Windows (Inno Setup)
+- Arch Based distro (PKGBUILD file)
+- GNU/Linux (App Image)
+
+### Tier 2 (Tested, no official package yet)
+- FreeBSD
+
+### Tier 3 (Not tested, but should work, no official package planned)
 - MacOS (could, but unsupported as I do not own a Mac)
-- Any OS in UNIX Spectrum (not tested yet)
+- Any OS in UNIX Spectrum that the Rust toolchain support
 
 ## Usage
 
@@ -32,7 +44,7 @@ cargo build --release
 ```bash
 ./target/release/flex-rs [option]
 
-./target/release/flex-rs <path to the .ascii file>
+./target/release/flex-rs "assets/images/infinity.ascii" # this is a example, replace the file name with the desired .ascii file to show
 
 ./target/release/flex-rs --version # ./target/release/flex-rs --v
 

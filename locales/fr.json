@@ -1,0 +1,10 @@
+{
+    "enter_path_label" :"Entrez le chemin complet ou relatif du fichier d'art ASCII que vous souhaitez afficher : ",
+    "about_label_key": "Flex-rs est un projet Rust simple conçu pour afficher de l'art ASCII à partir de fichiers .ascii.",
+    "option_label":"[option]",
+    "path_input_help_label" :"<chemin vers le fichier .ascii>",
+
+    "error_read_console" : "Erreur : impossible de lire la console",
+    "error_file_unreable" :"Erreur : impossible de lire le fichier",
+    "error_file_not_found": "Erreur : fichier introuvable."
+}

@@ -1,0 +1,9 @@
+# Changelog V.0.0.2.0
+
+## Feb 14 
+
+- Remove duplicate or useless binary file like a duplicate `icon.ico` file and a complied `flex.exe` executable
+- Update the `Cargo.lock` file
+- Update the `README.md`
+- Update the `.ascii` files
+- Updated the cargo app image installer script

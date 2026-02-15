@@ -1,11 +1,16 @@
 [package]
 name = "flex-rs"
-version = "0.0.5"
-edition = "2021"
+version = "0.0.20"
+edition = "2024"
+authors = [ "Xgui4" ]
 build = "build.rs"
+license = "MIT"
+repository = "https://github.com/xgui4/flex"
+exclude = ["target/", "assets/images/", "docs/", "packages/"]
 
 [build-dependencies]
 windows_exe_info = "0.5.2"
 
 [dependencies]
 windows_exe_info = {version = "0.5.2", features = ["manifest"]}
+rust-i18n = "3"

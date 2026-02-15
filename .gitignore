@@ -1,10 +1,10 @@
-/target
-/Output
+**/target
+**/Output
 
-/packages/pkg
-/packages/src
+**/packages/pkg
+**/packages/src
 
-*.tar.gz
-*.tar.
+**.tar.gz
+**.tar.
 
-/packages/Output
+**/packages/Output

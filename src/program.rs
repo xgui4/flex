@@ -1,31 +1,40 @@
 use std::{fs, io};
 use std::path::Path;
 
+use crate::cmd_line::{self, get_string};
+
+use crate::data::app_data;
+
+use cmd_line::Args;
+
+const APP_NAME: &str = app_data::APP_NAME; 
+const VERSION: &str = app_data::VERSION; 
+const LICENSE: &str = app_data::LICENSE;
+
 const PATH_INPUT_LABEL: &str = "Enter the full path or relative path of the ASCII art file you want to display:";
 const ERROR_READ_CONSOLE: &str = "Error : failed to read console";
 const ERROR_FILE_CANNOT_BE_READ: &str = "Error : Should have been able to read the file";
 const ERROR_FILE_NOT_FOUND: &str = "Error : file cannot be read";
-const VERSION: &str = "0.0.1";
-const LICENSE: &str = "Copyright ©️ 2025 Xgui4 Studio | MIT License";
 const ABOUT: &str = "Flex-rs is a simple Rust project designed to display ASCII art from .ascii files.";
 const OPTION_LABEL: &str = "[option]";
 const PATH_INPUT_HELP_LABEL: &str = "<path to the .ascii file>";
 
 pub fn start_program(args: Vec<String>) {
     if args.len() > 1 {
-        if args[1] == "--version" || args[1] == "--v" {
-            println!("Flex-rs Version {VERSION}");
+        let arg: String = args[1].to_owned(); 
+        if arg == get_string(Args::CmdVersionLong) || arg == get_string(Args::CmdVersion)  {
+            println!("{APP_NAME} Version {VERSION}");
         }
-        if args[1] == "--license" || args[1] == "--l" {
+        if arg == get_string(Args::CmdLicense) || arg == get_string(Args::CmdLicenseLong) {
             println!("{LICENSE}");
         }
-        if args[1] == "--about" || args[1] == "--a" {
+        if arg == get_string(Args::CmdAbout) || arg == get_string(Args::CmdAboutLong) {
             println!("{ABOUT}");
         }
-        if args[1] == "--help" || args[1] == "--h" {
+        if arg == get_string(Args::CmdHelp) || arg == get_string(Args::CmdHelpLong) {
             print_help();
         }
-        if args[1] == "--color-code" || args[1] == "--cc" {
+        if arg == get_string(Args::CmdColorCode) || arg == get_string(Args::CmdColorCodeLong) {
             print_colors_code_references();
         }
         else {
@@ -35,6 +44,13 @@ pub fn start_program(args: Vec<String>) {
     else {
         choice_user();
     }
+}
+
+pub fn keep_app_open_unil_key_pressed() {
+    println!("Press any key to quit...");
+    
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).unwrap();
 }
 
 fn choice_user() {
