@@ -6,6 +6,7 @@
 - Update the copyright date
 - fix the rtf documentations
 - make install.sh executable 
+- fix the Windows Build Manifest
 
 ## Feb 15 - Big Refactor 
 

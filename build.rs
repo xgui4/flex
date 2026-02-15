@@ -22,7 +22,7 @@ fn main(){
             charset: CharacterSet::Multilingual,
             comment: None,
             company_name: "Xgui4".into(),
-            file_description: "Show an ASCII Art File in a terminal".into(),
+            file_description: "Flex-rs".into(),
             file_version: "0.0.2.0".into(),
             internal_name: "flex-rs".into(),
             legal_copyright: None,
