@@ -13,3 +13,5 @@
 - Update the `Cargo.toml` file with more info and updated version (0.0.2.0, in cargo.toml it is 0.0.20 due to technical reason)
 - Updated the windows installed docs
 - Add a vscode debugger option
+- Added a git variant for the AUR
+- update pkgbuild + license
