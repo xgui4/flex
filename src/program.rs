@@ -10,25 +10,25 @@ pub fn start_program(args: Vec<String>) {
         if arg == get_string(Args::CmdVersionLong) || arg == get_string(Args::CmdVersion)  {
             features::display_app_version_info();
         }
-        if arg == get_string(Args::CmdLicense) || arg == get_string(Args::CmdLicenseLong) {
+        else if arg == get_string(Args::CmdLicense) || arg == get_string(Args::CmdLicenseLong) {
             features::display_license_info();
         }
-        if arg == get_string(Args::CmdAbout) || arg == get_string(Args::CmdAboutLong) {
+        else if arg == get_string(Args::CmdAbout) || arg == get_string(Args::CmdAboutLong) {
             features::display_about_info();
         }
-        if arg == get_string(Args::CmdHelp) || arg == get_string(Args::CmdHelpLong) {
+        else if arg == get_string(Args::CmdHelp) || arg == get_string(Args::CmdHelpLong) {
             features::print_help();
         }
-        if arg == get_string(Args::CmdColorCode) || arg == get_string(Args::CmdColorCodeLong) {
+        else if arg == get_string(Args::CmdColorCode) || arg == get_string(Args::CmdColorCodeLong) {
             features::print_colors_code_references();
         }
         else {
             features::output_image(&args[1]);
+            features::keep_app_open_unil_key_pressed();
         }
     }
-    else {
+    else if args.len() == 0{
         features::choice_user();
+        features::keep_app_open_unil_key_pressed();
     }
-
-    features::keep_app_open_unil_key_pressed();
 }

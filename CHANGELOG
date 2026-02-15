@@ -5,6 +5,7 @@
 - Added custom .ascii file for GNU/Linux based OS
 - Add a icon for the arch package
 - added start of windows-cross-compile option 
+- finally fix the bug where it still search for a file even if a other argument was present
 
 ## Feb 14 
 
