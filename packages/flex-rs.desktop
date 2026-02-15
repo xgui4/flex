@@ -1,7 +1,12 @@
 [Desktop Entry]
-Type=Application
-Name=Flex-rs
-Exec=flex-rs
 Comment=Show an ASCII Art File in a terminal
+Exec=flex-rs %f
+GenericName=flex-rs
 Icon=assets/icons/icon.ico
+MimeType=application/x-ascii;
+Name=Flex-rs
+StartupNotify=true
 Terminal=true
+Type=Application
+X-KDE-SubstituteUID=false
+Categories=Utility;ConsoleOnly;
