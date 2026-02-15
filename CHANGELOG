@@ -1,5 +1,12 @@
 # Changelog V.0.0.2.0
 
+## Big fixes :
+
+- Fix the desktop file 
+- Update the copyright date
+- fix the rtf documentations
+- make install.sh executable 
+
 ## Feb 15 - Big Refactor 
 
 - update the file extension as a text instead of a application type

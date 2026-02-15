@@ -5,7 +5,7 @@
     "option_label":"[option]",
     "path_input_help_label" :"Entrez le chemin d'accès vers le fichier `.ascii`",
     "press_any_key_to_quit": "Appuyer sur n'importe qu'elle touche pour quitter...",
-
+    
     "error_read_console" : "Erreur: impossible de lire la console",
     "error_file_unreable" :"Erreur: impossible de lire le fichier",
     "error_file_not_found": "Erreur: fichier introuvable."

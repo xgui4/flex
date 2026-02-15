@@ -24,8 +24,8 @@ args = ["run", "--target", "x86_64-pc-windows-gnu"]
 
 [tasks.install-arch]
 script = { file = "install.sh" }
-args = [ "aur" ]
+args = [ "aur-stable" ]
 
 [tasks.install-arch-git]
 script = { file = "install.sh" }
-args = [ "aur-git" ]
+args = [ "aur" ]

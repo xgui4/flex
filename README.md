@@ -36,7 +36,7 @@ Flex-rs is a simple Rust project designed to display ASCII art from `.ascii` fil
 
 ## Usage
 
-This is how you use it in portable mode, installation version guide coming later
+# Portable Mode (Build from Source without installation)
 
 1. Build the project:
 
@@ -63,6 +63,26 @@ cargo build --release
 ```
 
 wait until the program and enter the path of the .ascii file
+
+## Full Installaion
+
+### Arch (Git)
+
+```bash
+
+./install aur
+
+```
+
+### Arch (Stable)
+
+```bash
+
+./install aur-stable
+
+```
+
+Others comming soon!
 
 ## Code of Respect
 

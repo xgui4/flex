@@ -11,9 +11,10 @@
 
 # Arch Makepkg build files output
 **flex/
-**/packages/pkg
-**/packages/src
+**/packages/linux/pkg
+**/packages/linux/src
 ****pkg.tar.zst
+apkg
 
 # for now it is not needed 
 packages/windows/InnoDependencyInstaller
