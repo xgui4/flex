@@ -27,7 +27,7 @@ pub fn start_program(args: Vec<String>) {
             features::keep_app_open_unil_key_pressed();
         }
     }
-    else if args.len() == 0{
+    else if args.len() == 1{
         features::choice_user();
         features::keep_app_open_unil_key_pressed();
     }

@@ -1,12 +1,25 @@
 # Changelog V.0.0.2.0
 
+## Feb 15 - Big Refactor 
+
+- update the file extension as a text instead of a application type
+- Added a WIP `install.sh` script
+- Refactor the `packages` folder into two subfolder : `windows` and `linux`
+- Update the `windows` installer documentations
+- Removed outdated files
+- Added experimental `Makkefile.toml` file for cargo-make utility
+- Add `install.sh`and `iscc.sh` for better Windows compiling support on GNU/Linux
+- Added some file for vscode 
+- Slighty update the logo by removing the extra white line
+- Updated the `features` (`features.rs`) and `data::colors` (`data/features.rs`) crate for better readibiliy. 
+
 ## Feb 15
 
 - Added custom .ascii file for GNU/Linux based OS
 - Add a icon for the arch package
 - added start of windows-cross-compile option 
 - finally fix the bug where it still search for a file even if a other argument was present
-
+ 
 ## Feb 14 
 
 - Remove duplicate or useless binary file like a duplicate `icon.ico` file and a complied `flex.exe` executable

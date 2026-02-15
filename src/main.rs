@@ -19,5 +19,7 @@ fn main()
 {
     let args = args().collect();
 
+    // rust_i18n::set_locale("fr");
+
     program::start_program(args);
 }

@@ -4,6 +4,7 @@ use std::path::Path;
 
 use crate::data::app_data;
 use crate::data::colors;
+use crate::data::colors::Colors;
 
 const APP_NAME: &str = app_data::APP_NAME; 
 const VERSION: &str = app_data::VERSION; 
@@ -50,18 +51,20 @@ pub fn output_image(path: &str) {
     let error_file_cannot_be_read: &str = &t!(app_data::ERROR_FILE_CANNOT_BE_READ_KEY);
     let error_file_not_found:&str = &t!(app_data::ERROR_FILE_NOT_FOUND_KEY);
 
+    let reset_color = colors::get_color_code(Colors::Reset); 
+
     match absolute_path {
         Ok(real_path) => match fs::read_to_string(real_path) {
             Ok(image) => {
             let colored_image = image
-                .replace("$1", colors::get_color_color_code_fom_code("$1"))
-                .replace("$2", colors::get_color_color_code_fom_code("$2"))
-                .replace("$3", colors::get_color_color_code_fom_code("$3")) 
-                .replace("$4", colors::get_color_color_code_fom_code("$4")) 
-                .replace("$5", colors::get_color_color_code_fom_code("$5"))
-                .replace("$6", colors::get_color_color_code_fom_code("$6"))
-                .replace("$0", colors::get_color_color_code_fom_code("$7"));
-            println!("{colored_image}\x1b[0m");
+                .replace("$1", colors::get_color_espace_code_fom_color_code("$1"))
+                .replace("$2", colors::get_color_espace_code_fom_color_code("$2"))
+                .replace("$3", colors::get_color_espace_code_fom_color_code("$3")) 
+                .replace("$4", colors::get_color_espace_code_fom_color_code("$4")) 
+                .replace("$5", colors::get_color_espace_code_fom_color_code("$5"))
+                .replace("$6", colors::get_color_espace_code_fom_color_code("$6"))
+                .replace("$0", colors::get_color_espace_code_fom_color_code("$7"));
+            println!("{colored_image}{reset_color}");
             },
             Err(e) => println!("{error_file_cannot_be_read}: {}", e),
         },

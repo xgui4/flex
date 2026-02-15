@@ -1,0 +1,31 @@
+[tasks.build]
+command = "cargo"
+args = ["build"]
+
+[tasks.build-win32]
+command = "cargo"
+args = ["build", "--target", "x86_32-pc-windows-gnu"]
+
+[tasks.build-win64]
+command = "cargo"
+args = ["build", "--target", "x86_64-pc-windows-gnu"]
+
+[tasks.run]
+command = "cargo"
+args = ["run"]
+
+[tasks.run-win32]
+command = "cargo"
+args = ["run", "--target", "x86_32-pc-windows-gnu"]
+
+[tasks.run-win64]
+command = "cargo"
+args = ["run", "--target", "x86_64-pc-windows-gnu"]
+
+[tasks.install-arch]
+script = { file = "install.sh" }
+args = [ "aur" ]
+
+[tasks.install-arch-git]
+script = { file = "install.sh" }
+args = [ "aur-git" ]
