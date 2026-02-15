@@ -8,3 +8,6 @@
 **.tar.
 
 **/packages/Output
+
+**flex/
+packages/flex-rs-2:r48.6ec7679-1-x86_64.pkg.tar.zst
