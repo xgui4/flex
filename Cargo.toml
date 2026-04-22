@@ -4,7 +4,7 @@ version = "0.0.20"
 edition = "2024"
 authors = [ "Xgui4" ]
 build = "build.rs"
-license = "MIT"
+license = "GPL3"
 repository = "https://github.com/xgui4/flex"
 exclude = ["target/", "assets/images/", "docs/", "packages/"]
 

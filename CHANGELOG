@@ -1,5 +1,11 @@
 # Changelog V.0.0.2.0
 
+## Major Changes :
+
+- License updated to GNU General Public License v3.0 License from MIT License and the license file was updated to reflect the change.
+- The `README.md` file was updated to reflect the license change and the license section was added to the end of the file.
+- Minor update the code of conduct 
+
 ## Big fixes :
 
 - Fix the desktop file 

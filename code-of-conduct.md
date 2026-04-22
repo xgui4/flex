@@ -39,3 +39,7 @@ We have no enforcement team (nor do we want one).
 You can create a issue on the project's issue tracker.
 
 **Let's makes software togethers !**
+
+The Code of Respect is inspired by the [No Code of Conduct](https://nocodeofconduct.com)
+
+## Last Changes: 16 November 2025

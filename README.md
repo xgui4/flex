@@ -84,6 +84,10 @@ wait until the program and enter the path of the .ascii file
 
 Others comming soon!
 
+## License
+
+This project is licensed under the GNU General Public License v3.0 License. See the [LICENSE](LICENSE) file for details.
+
 ## Code of Respect
 
 [Code of Conduct](code-of-conduct.md)
