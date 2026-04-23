@@ -4,6 +4,7 @@ pub mod program;
 pub mod cmd_line;
 pub mod data;
 pub mod features;
+pub mod managers;
 
 // Load I18n macro, for allow you use `t!` macro in anywhere.
 #[macro_use]
@@ -17,7 +18,7 @@ i18n!("locales", fallback = "en");
 
 fn main()
 {
-    let args = args().collect();
+    let args: Vec<String> = args().collect();
 
     // rust_i18n::set_locale("fr");
 

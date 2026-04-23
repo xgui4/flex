@@ -25,7 +25,7 @@ fn main(){
             file_description: "Flex-rs".into(),
             file_version: "0.0.2.0".into(),
             internal_name: "flex-rs".into(),
-            legal_copyright: None,
+            legal_copyright: Some("GPLv3".into()),
             legal_trademarks: None,
             original_filename: "flex-rs.exe".into(),
             product_name: "Flex-rs".into(),

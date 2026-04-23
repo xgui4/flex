@@ -1,4 +1,4 @@
-pub enum Args {
+pub enum CmdArgs {
     CmdVersion,
     CmdVersionLong,
     CmdLicense,
@@ -11,17 +11,19 @@ pub enum Args {
     CmdColorCodeLong,
 }
 
-pub fn get_string(arg : Args) -> String {
-    return match arg {
-        Args::CmdVersion => "--v".to_owned(),
-        Args::CmdVersionLong => "--version".to_owned(),
-        Args::CmdAbout => "-a".to_owned(),
-        Args::CmdAboutLong => "--about".to_owned(),
-        Args::CmdLicense => "-l".to_owned(),
-        Args::CmdLicenseLong => "--license".to_owned(),
-        Args::CmdHelp => "-h".to_owned(),
-        Args::CmdHelpLong => "--help".to_owned(),
-        Args::CmdColorCode => "-c".to_owned(),
-        Args::CmdColorCodeLong => "--color-code".to_owned()
+impl CmdArgs {
+    pub fn get_string(&self) -> String {
+        match self {
+            CmdArgs::CmdVersion => "--v".to_owned(),
+            CmdArgs::CmdVersionLong => "--version".to_owned(),
+            CmdArgs::CmdAbout => "-a".to_owned(),
+            CmdArgs::CmdAboutLong => "--about".to_owned(),
+            CmdArgs::CmdLicense => "-l".to_owned(),
+            CmdArgs::CmdLicenseLong => "--license".to_owned(),
+            CmdArgs::CmdHelp => "-h".to_owned(),
+            CmdArgs::CmdHelpLong => "--help".to_owned(),
+            CmdArgs::CmdColorCode => "-c".to_owned(),
+            CmdArgs::CmdColorCodeLong => "--color-code".to_owned()
+        }
     }
 }

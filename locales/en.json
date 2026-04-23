@@ -6,6 +6,15 @@
     "path_input_help_label" : "Enter the path to the `.ascii` file",
     "press_any_key_to_quit": "Press any key to quit...",
 
+    "color_code_reference" : "Color Code Reference:", 
+    "color1" : "$1 : Red",
+    "color2" : "$2 : Green",
+    "color3" : "$3 : Yellow",
+    "color4" : "$4 : Blue",
+    "color5" : "$5 : Magenta",
+    "color6" : "$6 : Cyan",
+    "color0" : "$0 : Reset",
+
     "error_read_console" : "Error : failed to read console",
     "error_file_unreable" :"Error : Should have been able to read the file",
     "error_file_not_found": "Error : file was not found."

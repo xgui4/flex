@@ -5,6 +5,13 @@
 - License updated to GNU General Public License v3.0 License from MIT License and the license file was updated to reflect the change.
 - The `README.md` file was updated to reflect the license change and the license section was added to the end of the file.
 - Minor update the code of conduct 
+- Updated dependancies with "cargo update" command
+
+## Minor Changes :
+- Betters functions names
+- Some Cleaning and refactor of the code
+- Better Codebase
+- Mores Translation Texts and fix the help string not being translated
 
 ## Big fixes :
 
