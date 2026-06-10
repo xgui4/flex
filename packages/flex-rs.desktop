@@ -1,11 +1,11 @@
 [Desktop Entry]
 Comment=Show an ASCII Art File in a terminal
 Exec=flex-rs %f
-GenericName=flex-rs
-Icon=assets/icons/icon.ico
-MimeType=text/x-ascii;
+GenericName=ASCII Text Viewer
+Icon=flex-rs
+MimeType=text/x-ascii
 Name=Flex-rs
 Terminal=true
 Type=Application
 X-KDE-SubstituteUID=false
-Categories=Utility;ConsoleOnly;
+Categories=Utility;TextTools;X-ASCII;ConsoleOnly;X-Rust

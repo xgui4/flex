@@ -1,0 +1,47 @@
+# Maintainer: Xgui4
+pkgname=flex-rs
+pkgver=0.0.20
+pkgrel=0
+pkgdesc="Show an ASCII Art File in a terminal"
+arch=('x86_64')
+url="https://github.com/xgui4/flex"
+license=('GPLv3')
+depends=('gcc-libs')
+makedepends=('rust' 'cargo')
+source=("${pkgname}::git+${url}.git#tag=v0.0.20") # This tag is not available yet
+sha256sums=('SKIP')
+
+build() {
+    cd "$srcdir/flex-$pkgver"
+    cargo build --release --locked --all-features --target-dir=target
+}
+
+package() {
+    cd "$srcdir/flex-$pkgver"
+    install -Dm755 "target/release/flex" "$pkgdir/usr/bin/flex-rs"
+    install -Dm644 "packages/ascii-mime.xml"  "$pkgdir/usr/share/mime/packages/$pkgname.xml"
+    install -Dm644 "packages/flex-rs.desktop" "$pkgdir/usr/share/applications/$pkgname.desktop"
+    install -Dm644 "locales/fr.json" "$pkgdir/var/lib/$pkgname/locales/fr.json"
+    install -Dm644 "locales/en.json" "$pkgdir/var/lib/$pkgname/locales/en.json"
+    install -Dm644 "assets/examples/infinity.ascii" "$pkgdir/var/lib/$pkgname/assets/examples/infinity.ascii"
+    install -Dm644 "assets/examples/tux.ascii" "$pkgdir/var/lib/$pkgname/assets/examples/tux.ascii"
+    install -Dm644 "assets/examples/xgui4.ascii" "$pkgdir/var/lib/$pkgname/assets/examples/xgui4.ascii"
+    install -Dm644 "assets/examples/README.md" "$pkgdir/var/lib/$pkgname/assets/examples/README.md"
+    install -Dm644 "assets/icons/512x512/flex-rs.png" "$pkgdir/usr/share/icons/hicolor/512x512/apps/flex-rs.png"    
+    install -Dm644 "assets/icons/256x256/flex-rs.png" "$pkgdir/usr/share/icons/hicolor/256x256/apps/flex-rs.png"
+    install -Dm644 "assets/icons/128x128/flex-rs.png" "$pkgdir/usr/share/icons/hicolor/128x128/apps/flex-rs.png"
+    install -Dm644 "assets/icons/64x64/flex-rs.png" "$pkgdir/usr/share/icons/hicolor/64x64/apps/flex-rs.png"
+    install -Dm644 "assets/icons/48x28/flex-rs.png" "$pkgdir/usr/share/icons/hicolor/48x28/apps/flex-rs.png"
+    install -Dm644 "assets/icons/32x32/flex-rs.png" "$pkgdir/usr/share/icons/hicolor/32x32/apps/flex-rs.png"
+    install -Dm644 "assets/icons/16x16/flex-rs.png" "$pkgdir/usr/share/icons/hicolor/16x16/apps/flex-rs.png" 
+    install -Dm644 "assets/icons/512x512/text-x-ascii.png" "$pkgdir/usr/share/icons/hicolor/512x512/mimetypes/text-x-ascii.png"
+    install -Dm644 "assets/icons/256x256/text-x-ascii.png" "$pkgdir/usr/share/icons/hicolor/256x256/mimetypes/text-x-ascii.png"
+    install -Dm644 "assets/icons/128x128/text-x-ascii.png" "$pkgdir/usr/share/icons/hicolor/128x128/mimetypes/text-x-ascii.png"
+    install -Dm644 "assets/icons/64x64/text-x-ascii.png" "$pkgdir/usr/share/icons/hicolor/64x64/mimetypes/text-x-ascii.png"
+    install -Dm644 "assets/icons/48x28/text-x-ascii.png" "$pkgdir/usr/share/icons/hicolor/48x28/mimetypes/text-x-ascii.png"
+    install -Dm644 "assets/icons/32x32/text-x-ascii.png" "$pkgdir/usr/share/icons/hicolor/32x32/mimetypes/text-x-ascii.png"
+    install -Dm644 "assets/icons/16x16/text-x-ascii.png" "$pkgdir/usr/share/icons/hicolor/16x16/mimetypes/text-x-ascii.png"
+    install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+    install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+    install -Dm644 code-of-conduct.md "$pkgdir/usr/share/doc/$pkgname/code-of-conduct.md"
+}

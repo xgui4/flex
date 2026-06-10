@@ -1,31 +1,40 @@
 # Changelog V.0.0.20
 
-## Major Changes :
+## Major Changes
 
 - License updated to GNU General Public License v3.0 License from MIT License and the license file was updated to reflect the change.
-- The `README.md` file was updated to reflect the license change and the license section was added to the end of the file.
-- Minor update the code of conduct 
+- The `README.md` file was updated to reflect the license change and the license section was added to the end of the file and rhe compilaton section was move to the `COMPILING.md` file
 - Updated dependancies with "cargo update" command
 - New Nightly Build with GitHub application
-- Fix and added correct dimmensions for the GNU/Linux and FreeBSD icons
+- Fix and added correct dimensions for the Unix like system
+- Added Helper script and cargo makefile support
+- Added more dimensions for icons
+- Added ASCII mime type icons for Unix like system
+- Better Versions scheme for the alpha: only use 3 letters and increment to 10 when there it is a major version.
+- Updated the Code Of Respect to the latest version
+- Arch Package now follow the linux/unix File system hierachy and XDG sepcs with addded locales and examples ascii files
+- Now show the release type with the --version or -v command line flag
+- Fix the Windows ascii icon to show the correct one and add it to Linux
+- Update Desktop Entry
 
-## Minor Changes :
+## Minor Changes
+
 - Betters functions names
 - Some Cleaning and refactor of the code
 - Better Codebase
 - Mores Translation Texts and fix the help string not being translated
 
-## Big fixes :
+## Big fixes
 
-- Fix the desktop file 
+- Fix the desktop file
 - Update the copyright date
 - fix the rtf documentations
-- make install.sh executable 
+- make install.sh executable
 - fix the Windows Build Manifest
 
 ### OLD CHANGELOG TYPE , keep for git history purpose
 
-## Feb 15 - Big Refactor 
+## Feb 15 - Big Refactor
 
 - update the file extension as a text instead of a application type
 - Added a WIP `install.sh` script
@@ -34,18 +43,18 @@
 - Removed outdated files
 - Added experimental `Makefile.toml` file for cargo-make utility
 - Add `install.sh`and `iscc.sh` for better Windows compiling support on GNU/Linux
-- Added some file for vscode 
+- Added some file for vscode
 - Slighty update the logo by removing the extra white line
-- Updated the `features` (`features.rs`) and `data::colors` (`data/features.rs`) crate for better readibiliy. 
+- Updated the `features` (`features.rs`) and `data::colors` (`data/features.rs`) crate for better readibiliy.
 
 ## Feb 15
 
 - Added custom .ascii file for GNU/Linux based OS
 - Add a icon for the arch package
-- added start of windows-cross-compile option 
+- added start of windows-cross-compile option
 - finally fix the bug where it still search for a file even if a other argument was present
- 
-## Feb 14 
+
+## Feb 14
 
 - Remove duplicate or useless binary file like a duplicate `icon.ico` file and a complied `flex.exe` executable
 - Update the `Cargo.lock` file

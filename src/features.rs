@@ -9,10 +9,11 @@ use crate::managers::color_managers;
 
 const APP_NAME: &str = app_data::APP_NAME; 
 const VERSION: &str = app_data::VERSION; 
+const RELEASE_TYPE: &str = app_data::RELEASE_TYPE;
 const LICENSE_TEXT_STR: &str = app_data::LICENSE_TEXT_STR;
 
-pub fn display_app_version_info() {
-    println!("{APP_NAME} Version {VERSION}");
+pub fn display_version_str() {
+    println!("{APP_NAME} {RELEASE_TYPE} Version {VERSION}");
 }
 
 pub fn display_license_info() {
@@ -24,7 +25,7 @@ pub fn display_about_info() {
     println!("{about_str}");
 }
 
-pub fn keep_app_open_unil_key_pressed() {
+pub fn pause_app() {
     let press_any_key_to_quit_str : &str = &t!(app_data::PRESS_ANY_KEY_TO_QUIT_KEY);
     println!("{press_any_key_to_quit_str}");
     
@@ -57,7 +58,7 @@ pub fn output_image(path: &str) {
     match absolute_path {
         Ok(real_path) => match fs::read_to_string(real_path) {
             Ok(image) => {
-            let colored_image = color_managers::generated_colored_text(&image);
+            let colored_image = color_managers::colorized_text(&image);
             println!("{colored_image}{reset_color}");
             },
             Err(e) => println!("{error_file_cannot_be_read}: {}", e),
@@ -73,7 +74,7 @@ pub fn print_help() {
     }
 }
 
-pub fn print_colors_code_references() {
+pub fn print_colors_code_refs() {
     for string in &app_data::COLOR_CODE_HELP_STRING {
         let translated_msg = t!(*string);
         println!("{translated_msg}"); 

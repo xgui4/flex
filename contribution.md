@@ -8,7 +8,7 @@ Fork the Repository: Create a copy of this repository in your GitHub account.
 Clone Your Fork: Download your forked repository to your local machine.
 
 ```bash
-    git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+    git clone https://github.com/YOUR_USERNAME/YOUR_FORK.git
 ```
 
 Create a New Branch: Create a dedicated branch for your changes.
@@ -25,7 +25,6 @@ or
 
 Make Your Changes: Implement your features or fix bugs.
 Commit Your Changes: Write clear and concise commit messages.
-
 
 ```bash
     git commit -m "feat: Add new feature"

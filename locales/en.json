@@ -15,6 +15,8 @@
     "color6" : "$6 : Cyan",
     "color0" : "$0 : Reset",
 
+    "or_str" : "ou",
+
     "error_read_console" : "Error : failed to read console",
     "error_file_unreable" :"Error : Should have been able to read the file",
     "error_file_not_found": "Error : file was not found."

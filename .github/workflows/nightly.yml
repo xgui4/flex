@@ -1,8 +1,9 @@
-name: Rust
+name: Build and Deploy Nightly
 
 on:
   push:
-    branches: [ "dev" ]
+    branches:
+      - "dev"
   workflow_dispatch :
 permissions:
   contents: write
@@ -10,28 +11,28 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  name : Build Flex-rs
   build:
+      name : Build Flex-rs
       strategy:
         matrix:
-        os: [ubuntu-latest, windows-latest]
+          os: [ubuntu-latest, windows-latest]
       runs-on: ${{ matrix.os }}
 
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build
-      run: cargo build --verbose
+      steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: cargo build --verbose
 
-    - name: Upload Nightly
-      uses: andelf/nightly-release@main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: nightly
-        name: Nightly Release
-        body: "
+      - name: Upload Nightly
+        uses: andelf/nightly-release@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: nightly
+          name: Nightly Release
+          body: "
             Higtly Experimental Nighty Build of Flex-rs
             "
-        files: |
+          files: |
             ./target/release/flex-rs.exe
             ./target/release/flex-rs

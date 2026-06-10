@@ -4,11 +4,11 @@ if [ "$1" = "debian" ]; then
     echo "Coming Soon!"
 fi
 
-if [ "$1" = "freebsd" ]; then
+if [ "$1" = "appimage" ]; then
     echo "Coming Soon!"
 fi
 
-if [ "$1" =  "appimage" ]; then
+if [ "$1" = "flatpak" ]; then
     echo "Coming Soon!"
 fi
 
@@ -17,12 +17,12 @@ if [ "$1" = "windows" ]; then
 fi
 
 if [ "$1" = "aur" ]; then 
-    cd "packages/linux" || return 0
-    makepkg -p PKGBUILD-git --install
+    cd "packages/linux/nightly" || return 0
+    makepkg --si
 fi
 
 if [ "$1" = "aur-stable" ]; then 
     echo "This is for the 0.0.2.0 stable version who is might not be available yet"
-    cd "packages/linux" || return 0
-    makepkg --install
+    cd "packages/linux/stable" || return 0
+    makepkg --si
 fi

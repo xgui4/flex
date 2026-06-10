@@ -1,7 +1,9 @@
 pub const VERSION : &str = "0.0.20"; 
+pub const RELEASE_TYPE: &str = "Alpha";
 pub const AUTHOR : &str = "Xgui4"; 
 pub const LICENSE : &str = "GPL3";
 pub const APP_NAME : &str = "Flex-rs";
+pub const APP_EXECUTABLE : &str = "flex-rs";
 pub const YEAR: &str = "2026";
 pub const LICENSE_STR: &str = "Copyleft ©️ {YEAR} {AUTHOR} | {LICENSE} License";
 
@@ -16,13 +18,15 @@ pub const ERROR_READ_CONSOLE_KEY : &str = "error_read_console";
 pub const ERROR_FILE_CANNOT_BE_READ_KEY: &str = "error_file_unreable";
 pub const ERROR_FILE_NOT_FOUND_KEY: &str = "error_file_not_found";
 
-pub const HELP_STRING: [&str; 6]  = [
+pub const HELP_STRING: [&str; 8]  = [
+    ABOUT_LABEL_KEY,
     OPTION_LABEL_KEY,
-    "--License or --l",
-    "--about or --a",
-    "--version or --l",
-    "--color-code or --c",
-    PATH_INPUT_HELP_LABEL_KEY
+    "{APP_EXECUTABLE} --License or_str --l",
+    "{APP_EXECUTABLE} --about or_str --a",
+    "{APP_EXECUTABLE} --version or_str --l",
+    "{APP_EXECUTABLE} --color-code or_str --c",
+    PATH_INPUT_HELP_LABEL_KEY,
+    LICENSE_TEXT_STR
 ]; 
 
 pub const COLOR_CODE_HELP_STRING: [&str; 8]  = [

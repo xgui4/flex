@@ -14,10 +14,10 @@
     "color5" : "$5 : Magenta",
     "color6" : "$6 : Cyan",
     "color0" : "$0 : Réinitialiser",
+
+    "or_str" : "or",
     
     "error_read_console" : "Erreur: impossible de lire la console",
     "error_file_unreable" :"Erreur: impossible de lire le fichier",
     "error_file_not_found": "Erreur: fichier introuvable."
-
-
 }

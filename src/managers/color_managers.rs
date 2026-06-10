@@ -1,6 +1,6 @@
 use crate::data::colors::{self, Colors};
 
-pub fn generated_colored_text(txt : &str) -> String {
+pub fn colorized_text(txt : &str) -> String {
     let colored_text = txt
     .replace(Colors::Blue.get_color_code(), colors::get_escape_code(Colors::Blue))
     .replace(Colors::Cyan.get_color_code(), colors::get_escape_code(Colors::Cyan))
