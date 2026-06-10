@@ -1,7 +1,7 @@
 # Maintainer: Xgui4
 pkgname=flex-rs
-pkgver=0.0.20
-pkgrel=0
+pkgver=r62.285df28
+pkgrel=1
 pkgdesc="Show an ASCII Art File in a terminal"
 arch=('x86_64')
 url="https://github.com/xgui4/flex"
@@ -17,13 +17,13 @@ pkgver() {
 }
 
 build() {
-    cd "$srcdir/flex-$pkgver"
+    cd "$srcdir/flex"
     cargo build --release --locked --all-features --target-dir=target
 }
 
 package() {
-    cd "$srcdir/flex-$pkgver"
-    install -Dm755 "target/release/flex" "$pkgdir/usr/bin/flex-rs"
+    cd "$srcdir/flex"
+    install -Dm755 "target/release/flex-rs" "$pkgdir/usr/bin/flex-rs"
     install -Dm644 "packages/ascii-mime.xml"  "$pkgdir/usr/share/mime/packages/$pkgname.xml"
     install -Dm644 "packages/flex-rs.desktop" "$pkgdir/usr/share/applications/$pkgname.desktop"
     install -Dm644 "locales/fr.json" "$pkgdir/var/lib/$pkgname/locales/fr.json"

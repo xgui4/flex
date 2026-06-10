@@ -23,6 +23,7 @@
 - Some Cleaning and refactor of the code
 - Better Codebase
 - Mores Translation Texts and fix the help string not being translated
+- update the gitignore so it work with the reorganisation of the arch packages folder
 
 ## Big fixes
 

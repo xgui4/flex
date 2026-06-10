@@ -12,13 +12,13 @@ source=("${pkgname}::git+${url}.git#tag=v0.0.20") # This tag is not available ye
 sha256sums=('SKIP')
 
 build() {
-    cd "$srcdir/flex-$pkgver"
+    cd "$srcdir/flex"
     cargo build --release --locked --all-features --target-dir=target
 }
 
 package() {
-    cd "$srcdir/flex-$pkgver"
-    install -Dm755 "target/release/flex" "$pkgdir/usr/bin/flex-rs"
+    cd "$srcdir/flex"
+    install -Dm755 "target/release/flex-rs" "$pkgdir/usr/bin/flex-rs"
     install -Dm644 "packages/ascii-mime.xml"  "$pkgdir/usr/share/mime/packages/$pkgname.xml"
     install -Dm644 "packages/flex-rs.desktop" "$pkgdir/usr/share/applications/$pkgname.desktop"
     install -Dm644 "locales/fr.json" "$pkgdir/var/lib/$pkgname/locales/fr.json"

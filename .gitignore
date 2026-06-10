@@ -11,8 +11,8 @@
 
 # Arch Makepkg build files output
 **flex/
-**/packages/linux/pkg
-**/packages/linux/src
+**/packages/linux/*/pkg
+**/packages/linux/*/src
 ****pkg.tar.zst
 apkg
 
