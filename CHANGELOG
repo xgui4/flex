@@ -1,4 +1,4 @@
-# Changelog V.0.0.2.0
+# Changelog V.0.0.20
 
 ## Major Changes :
 
@@ -6,6 +6,8 @@
 - The `README.md` file was updated to reflect the license change and the license section was added to the end of the file.
 - Minor update the code of conduct 
 - Updated dependancies with "cargo update" command
+- New Nightly Build with GitHub application
+- Fix and added correct dimmensions for the GNU/Linux and FreeBSD icons
 
 ## Minor Changes :
 - Betters functions names
@@ -21,6 +23,8 @@
 - make install.sh executable 
 - fix the Windows Build Manifest
 
+### OLD CHANGELOG TYPE , keep for git history purpose
+
 ## Feb 15 - Big Refactor 
 
 - update the file extension as a text instead of a application type
@@ -28,7 +32,7 @@
 - Refactor the `packages` folder into two subfolder : `windows` and `linux`
 - Update the `windows` installer documentations
 - Removed outdated files
-- Added experimental `Makkefile.toml` file for cargo-make utility
+- Added experimental `Makefile.toml` file for cargo-make utility
 - Add `install.sh`and `iscc.sh` for better Windows compiling support on GNU/Linux
 - Added some file for vscode 
 - Slighty update the logo by removing the extra white line
