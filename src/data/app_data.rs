@@ -1,4 +1,4 @@
-pub const VERSION : &str = "0.0.2.0"; 
+pub const VERSION : &str = "0.0.20"; 
 pub const AUTHOR : &str = "Xgui4"; 
 pub const LICENSE : &str = "GPL3";
 pub const APP_NAME : &str = "Flex-rs";
