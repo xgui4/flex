@@ -17,7 +17,7 @@
 
 ## Focus
 
-This project is about software and [Free Software](https://www.gnu.org/philosophy/free-sw.html)
+This project is about making software (technical merit) and [Free Software](https://www.gnu.org/philosophy/free-sw.html)
 
 Contributions should focus on code, quality, and collaboration.
 
